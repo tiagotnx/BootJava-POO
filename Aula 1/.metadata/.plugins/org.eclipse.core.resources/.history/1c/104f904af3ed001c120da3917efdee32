@@ -1,0 +1,64 @@
+package triangulo;
+
+import geometria.Triangulo;
+
+public class TrianguloExec {
+
+	public static void main(String[] args) {
+
+		Triangulo a = new Triangulo();
+		Triangulo b = new Triangulo();
+
+		a.x = 7;
+		a.y = 8;
+		a.z = 8;
+
+		b.x = 15;
+		b.y = 10;
+		b.z = 13;
+
+		double area, perimetro;
+		String tipo;
+
+		if (Math.abs(a.x - a.y) < a.z && a.z < (a.x + a.y)) {
+			if (a.x == a.y && a.y == a.z)
+				tipo = "equilátero";
+			else if (a.x == a.y || a.x == a.z || a.y == a.z)
+				tipo = "isóceres";
+			else
+				tipo = "escaleno";
+
+			perimetro = (a.x + a.y + a.z) / 2;
+			area = Math.sqrt(perimetro * (perimetro - a.x) * (perimetro - a.y) * (perimetro - a.z));
+
+			System.out.printf("\nOs lados %.1f, %.1f e %.1f formam um triângulo %s.", a.x, a.y, a.z, tipo);
+			System.out.printf("\nO perímero do triângulo é %.1f.", perimetro);
+			System.out.printf("\nA área desse triângulo é %.1f.\n\n", area);
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+		
+		//Triângulo B
+		
+		if (Math.abs(b.x - b.y) < b.z && b.z < (b.x + b.y)) {
+			if (b.x == b.y && b.y == b.z)
+				tipo = "equilátero";
+			else if (b.x == b.y || b.x == b.z || b.y == b.z)
+				tipo = "isóceres";
+			else
+				tipo = "escaleno";
+
+			perimetro = (b.x + b.y + b.z) / 2;
+			area = Math.sqrt(perimetro * (perimetro - b.x) * (perimetro - b.y) * (perimetro - b.z));
+
+			System.out.printf("\nOs lados %.1f, %.1f e %.1f formam um triângulo %s.", b.x, b.y, b.z, tipo);
+			System.out.printf("\nO perímero do triângulo é %.1f.", perimetro);
+			System.out.printf("\nA área desse triângulo é %.1f.\n\n", area);
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+
+	}
+
+}

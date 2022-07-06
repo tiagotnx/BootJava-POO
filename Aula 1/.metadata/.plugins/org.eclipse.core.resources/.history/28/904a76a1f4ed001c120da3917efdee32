@@ -1,0 +1,8 @@
+package geometria;
+
+public class Triangulo {
+	public double x;
+	public double y;
+	public double z;
+
+}

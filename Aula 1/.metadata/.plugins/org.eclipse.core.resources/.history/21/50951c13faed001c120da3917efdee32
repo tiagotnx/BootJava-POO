@@ -1,0 +1,57 @@
+package triangulo;
+
+import java.util.Scanner;
+
+import geometria.Triangulo;
+
+public class TrianguloExec {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Triangulo a = new Triangulo();
+		Triangulo b = new Triangulo();
+
+		System.out.println("Insira os valores do triângulo A: ");
+		a.x = sc.nextDouble();
+		a.y = sc.nextDouble();
+		a.z = sc.nextDouble();
+
+		System.out.println("\nInsira os valores do triângulo B: ");
+		b.x = sc.nextDouble();
+		b.y = sc.nextDouble();
+		b.z = sc.nextDouble();
+
+		String tipo;
+		double area, perimetro;
+
+		if (a.validar() == true) {
+			tipo = a.classificar();
+			perimetro = a.perimetro();
+			area = a.area();
+			
+			System.out.printf("\nOs lados de A são %.1f, %.1f e %.1f formam um triângulo %s.", a.x, a.y, a.z, tipo);
+			System.out.printf("\nO perímero do triângulo é %.1f.", perimetro);
+			System.out.printf("\nA área desse triângulo é %.1f.\n\n", area);
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+		if (b.validar() == true) {
+			tipo = b.classificar();
+			perimetro = b.perimetro();
+			area = b.area();
+			
+			System.out.printf("\nOs lados de B são %.1f, %.1f e %.1f formam um triângulo %s.", b.x, b.y, b.z, tipo);
+			System.out.printf("\nO perímero do triângulo é %.1f.", perimetro);
+			System.out.printf("\nA área desse triângulo é %.1f.\n\n", area);
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+		sc.close();
+
+	}
+
+}

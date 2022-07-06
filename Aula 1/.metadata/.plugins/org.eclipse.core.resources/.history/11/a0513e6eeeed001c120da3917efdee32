@@ -1,0 +1,35 @@
+package triangulo;
+
+import java.util.Scanner;
+
+public class TrianguloExec {
+
+	public static void main(String[] args) {
+
+		double x, y, z, area, perimetro;
+		String tipo;
+		Scanner sc = new Scanner(System.in);
+
+		for (int i = 1; i <= 2; i++) {
+			System.out.printf("Digite os lados do %d° triângulo: ", i);
+			x = sc.nextDouble();
+			y = sc.nextDouble();
+			z = sc.nextDouble();
+
+			if (Math.abs(x - y) < z && z < (x + y)) {
+				if (x == y && y == z)
+					tipo = "equilátero";
+				else if (x == y || x == z || y == z)
+					tipo = "isóceres";
+				else
+					tipo = "escaleno";
+			} else {
+				System.out.println("\nOs lados informados não são de um triângulo\n\n");
+			}
+		}
+
+		sc.close();
+
+	}
+
+}

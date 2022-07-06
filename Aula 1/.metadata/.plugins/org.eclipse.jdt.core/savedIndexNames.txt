@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\tiago\Documents\GitHub\Boot Java - Turma 8\Disciplina 3 - Java\POO\Aulas\.metadata\.plugins\org.eclipse.jdt.core
+3406171383.index
+1865797976.index
+2159265395.index

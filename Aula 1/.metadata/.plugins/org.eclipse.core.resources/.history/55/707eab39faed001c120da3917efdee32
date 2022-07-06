@@ -1,0 +1,42 @@
+package triangulo;
+
+import java.util.Scanner;
+
+import geometria.Triangulo;
+
+public class TrianguloExec {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Triangulo a = new Triangulo();
+		Triangulo b = new Triangulo();
+
+		System.out.println("Insira os valores do triângulo A: ");
+		a.x = sc.nextDouble();
+		a.y = sc.nextDouble();
+		a.z = sc.nextDouble();
+
+		System.out.println("\nInsira os valores do triângulo B: ");
+		b.x = sc.nextDouble();
+		b.y = sc.nextDouble();
+		b.z = sc.nextDouble();
+
+		if (a.validar() == true) {
+			a.toString();
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+		if (b.validar() == true) {
+			b.toString();
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+		sc.close();
+
+	}
+
+}

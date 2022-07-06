@@ -1,0 +1,36 @@
+package triangulo;
+
+import java.util.Scanner;
+
+import geometria.Triangulo;
+
+public class TrianguloExec {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Triangulo a = new Triangulo();
+		Triangulo b = new Triangulo();
+
+		System.out.println("Insira os valores do triângulo A: \n");
+		a.x = 7;
+		a.y = 8;
+		a.z = 8;
+
+		System.out.println("Insira os valores do triângulo B: \n");
+		b.x = 15;
+		b.y = 10;
+		b.z = 13;
+
+		if (a.validar()) {
+			System.out.printf("\nOs lados %.1f, %.1f e %.1f formam um triângulo %s.", a.x, a.y, a.z, tipo);
+			System.out.printf("\nO perímero do triângulo é %.1f.", a.perimetro());
+			System.out.printf("\nA área desse triângulo é %.1f.\n\n", a.area());
+		} else {
+			System.out.println("\nOs lados informados não são de um triângulo.\n");
+		}
+
+	}
+
+}
